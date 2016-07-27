@@ -7,6 +7,6 @@ target 'TestArcGIS' do
 
   # Pods for TestArcGIS
 
+pod 'AFNetworking'
 pod 'ArcGIS-Runtime-SDK-iOS'
-
 end

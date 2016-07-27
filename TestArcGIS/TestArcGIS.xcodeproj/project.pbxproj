@@ -13,9 +13,11 @@
 		6C11D6701D48887E008CE0B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C11D66E1D48887E008CE0B5 /* Main.storyboard */; };
 		6C11D6721D48887E008CE0B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C11D6711D48887E008CE0B5 /* Assets.xcassets */; };
 		6C11D6751D48887E008CE0B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C11D6731D48887E008CE0B5 /* LaunchScreen.storyboard */; };
+		E90A7DD1692014EBC4826048 /* libPods-TestArcGIS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8076155CEA07178DDF253F92 /* libPods-TestArcGIS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E8B9E2545766BB5E3EFC56B /* Pods-TestArcGIS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestArcGIS.release.xcconfig"; path = "Pods/Target Support Files/Pods-TestArcGIS/Pods-TestArcGIS.release.xcconfig"; sourceTree = "<group>"; };
 		6C11D6621D48887E008CE0B5 /* TestArcGIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestArcGIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C11D6661D48887E008CE0B5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6C11D6681D48887E008CE0B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		6C11D6711D48887E008CE0B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C11D6741D48887E008CE0B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C11D6761D48887E008CE0B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8076155CEA07178DDF253F92 /* libPods-TestArcGIS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestArcGIS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCED7E9ED29411E4ED817404 /* Pods-TestArcGIS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestArcGIS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestArcGIS/Pods-TestArcGIS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90A7DD1692014EBC4826048 /* libPods-TestArcGIS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F5957A51CE59F9908D36861 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DCED7E9ED29411E4ED817404 /* Pods-TestArcGIS.debug.xcconfig */,
+				4E8B9E2545766BB5E3EFC56B /* Pods-TestArcGIS.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		6C11D6591D48887E008CE0B5 = {
 			isa = PBXGroup;
 			children = (
 				6C11D6641D48887E008CE0B5 /* TestArcGIS */,
 				6C11D6631D48887E008CE0B5 /* Products */,
+				5F5957A51CE59F9908D36861 /* Pods */,
+				E1CF95005464C77B7B7E2DFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +95,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E1CF95005464C77B7B7E2DFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8076155CEA07178DDF253F92 /* libPods-TestArcGIS.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6C11D6791D48887E008CE0B5 /* Build configuration list for PBXNativeTarget "TestArcGIS" */;
 			buildPhases = (
+				0D79C725BA669EF03853EBB0 /* [CP] Check Pods Manifest.lock */,
 				6C11D65E1D48887E008CE0B5 /* Sources */,
 				6C11D65F1D48887E008CE0B5 /* Frameworks */,
 				6C11D6601D48887E008CE0B5 /* Resources */,
+				059AF7328AE95253444FCD85 /* [CP] Embed Pods Frameworks */,
+				E2F46DD0A2849C20FACC4748 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -143,6 +170,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		059AF7328AE95253444FCD85 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestArcGIS/Pods-TestArcGIS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0D79C725BA669EF03853EBB0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E2F46DD0A2849C20FACC4748 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TestArcGIS/Pods-TestArcGIS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6C11D65E1D48887E008CE0B5 /* Sources */ = {
@@ -261,6 +336,7 @@
 		};
 		6C11D67A1D48887E008CE0B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCED7E9ED29411E4ED817404 /* Pods-TestArcGIS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestArcGIS/Info.plist;
@@ -272,6 +348,7 @@
 		};
 		6C11D67B1D48887E008CE0B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E8B9E2545766BB5E3EFC56B /* Pods-TestArcGIS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TestArcGIS/Info.plist;
@@ -300,6 +377,7 @@
 				6C11D67B1D48887E008CE0B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
